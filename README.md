@@ -11,8 +11,9 @@ npm run dev      # http://localhost:3000
 ## Customize
 Edit the `C` object at the top of `app/page.js`:
 ```js
-const C = { to: 'Dana', from: 'Adam', date: '2023-10-21' }
+const C = { to: 'Dana', from: 'Adam', date: '2023-10-21', ig: 'https://instagram.com/YOUR_HANDLE' }
 ```
+`ig` is where the footer link “gift a website” goes (your Instagram).
 Stamps and "open when" messages are the `STAMPS` and `OPEN_WHEN` arrays right below it.
 
 ## Stamp photos

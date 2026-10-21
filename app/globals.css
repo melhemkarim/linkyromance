@@ -86,7 +86,8 @@ h2{font:400 clamp(36px,10vw,48px)/1.1 var(--script);color:var(--gold);text-align
 .hid{font:40px/1.2 var(--script);color:var(--gold);margin:22px 0 0;opacity:0;transition:opacity .8s}
 .hid.on{opacity:1}
 .cnt{margin:30px 0 0;font-size:17px;font-style:italic;color:var(--gold);min-height:1.4em}
-.foot{margin:80px 0 0;text-align:center;font-size:15px;opacity:.55}
+.foot{margin:80px 0 0;text-align:center;font-size:15px;opacity:.7}
+.foot a{color:var(--gold);text-underline-offset:3px}
 @media (prefers-reduced-motion:reduce){.pt,.dp,.rw,.env,.seal,.halo,.hint{animation:none}}
 
 /* stamp photos */
@@ -96,3 +97,34 @@ h2{font:400 clamp(36px,10vw,48px)/1.1 var(--script);color:var(--gold);text-align
 .pic.has-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(#0000 35%,#000d)}
 .pic.has-photo span,.pic.has-photo em{position:relative;z-index:1}
 .pic.has-photo span{font-size:17px}
+
+/* smaller on phones */
+@media (max-width:480px){
+body{font-size:17px}
+.main{padding:40px 16px 56px}
+h2{font-size:clamp(30px,8.5vw,38px);margin:72px 0 8px}
+.sub{font-size:16px;margin-bottom:20px}
+.paper{padding:26px 20px}
+.paper p{font-size:19px}
+.to,.sig{font-size:34px}
+.hello{font-size:clamp(30px,8.5vw,42px)}
+.hint{font-size:15px}
+.env{width:min(72vw,290px)}
+.letter{font-size:32px}
+.seal{width:56px;height:56px;margin:-28px 0 0 -28px}
+.seal i{font-size:20px}
+.stamps{gap:16px}
+.f,.b{padding:10px}
+.pic b{font-size:44px}
+.pic span{font-size:14px}
+.pic.has-photo span{font-size:15px}
+.pic em{font-size:12px}
+.back-s{font-size:15.5px}
+.ow button{padding:13px 15px;font-size:17px}
+.ow .m{font-size:18px}
+.rw{width:min(54vw,210px)}
+.fl{font-size:21px}
+.hid{font-size:34px}
+.cnt{font-size:15px}
+.foot{font-size:13px}
+}

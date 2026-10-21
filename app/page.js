@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 // ---- edit these ----
-const C = { to: 'Dana', from: 'Karim', date: '2026-10-21' }
+const C = { to: 'Dana', from: 'Karim', date: '2023-10-21', ig: 'https://instagram.com/linkylb/' }
 
 const STAMPS = [
   { img: '/stamps/coffee.jpg', e: '☕', t: 'First coffee', p: 'Postmarked 2023', g: 'linear-gradient(160deg,#b5651d,#5a2a0b)', s: 'You were ten minutes late and I didn’t mind. I knew right then.' },
@@ -150,7 +150,7 @@ export default function Page() {
     setStage(1)
     navigator.vibrate?.(40)
     const t = (f, ms) => timers.current.push(setTimeout(f, ms))
-    t(() => burst(r.left + 33, r.top + 33, 38), 250)
+    t(() => burst(r.left + r.width / 2, r.top + r.height / 2, 38), 250)
     t(() => burst(innerWidth / 2, innerHeight * .4, 30), 1700)
     t(() => setStage(2), 3000)
     t(() => { setStage(3); scrollTo(0, 0) }, 3500)
@@ -222,7 +222,7 @@ export default function Page() {
           <p className={'hid' + (hid ? ' on' : '')}>Happy anniversary, my love 🌹</p>
         </section>
 
-        <p className="foot">Made with Linky · gift a website</p>
+        <p className="foot">Made with Linky · <a href={C.ig} target="_blank" rel="noopener noreferrer">gift a website</a></p>
       </main>
     </>
   )
